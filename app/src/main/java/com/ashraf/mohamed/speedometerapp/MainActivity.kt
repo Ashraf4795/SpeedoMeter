@@ -59,7 +59,7 @@ class MainActivity : AppCompatActivity(), EasyPermissions.PermissionCallbacks,
 
     fun calcSpeed(speed: Int){
 
-        if(speed == 2){
+        if(speed >= 10){
             //get current time as a start time
             speedUpStartTime = System.currentTimeMillis()
             // get current time as a finish time
@@ -70,7 +70,7 @@ class MainActivity : AppCompatActivity(), EasyPermissions.PermissionCallbacks,
                 thirtyToTenId.text = (speedDownTime/1000).toString()
                 speedDownStartTime = 0L
             }
-        }else if (speed >= 10){
+        }else if (speed >= 30){
             //check if increasing time is not zero, subtrack initial time with final time
             if(speedUpStartTime != 0L) {
                 speedUpEndTime = System.currentTimeMillis()
